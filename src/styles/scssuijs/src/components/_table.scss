@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the table component.
+// -----------------------------------------------------------------------------
+.ui-tables {
+    background-color: transparent;
+    width: 100%;
+    margin: 20px 0;
+    text-align: left;
+    border-collapse: collapse;
+    th {
+        font-weight: 600
+    }
+    th,
+    td {
+        padding: .5rem;
+        line-height: 1.5;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+    th {
+        border-bottom: 1px solid #F2F3F8;
+    }
+    tr {
+        border-bottom: 1px solid #F2F3F8;
+        &:last-child {
+            border-bottom: 1px solid transparent;
+        }
+    }
+    &__avatar {
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        overflow: hidden;
+        img {
+            height: 100%;
+        }
+    }
+}

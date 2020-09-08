@@ -1,0 +1,53 @@
+.report_general{
+  .fullscreen{
+      padding: 1rem 2rem;
+  }
+  .header_report{
+    .title_report{
+      font-size: 1.4rem;
+    }
+    .heading{
+      font-size: 1rem;
+    }
+    .heading,.title_report{
+      color: #003366;
+    }
+    .to-right{
+      text-align: right;
+    }
+  }
+  .total_amount{
+    text-align: right;
+    font-weight: 500;
+  }
+  .debt_detail{
+    color: #828282;
+    h4{
+      font-size: 1rem;
+    }
+  }
+
+  .affiliate{
+    margin-top: 1rem;
+    h3{
+      font-size: 1rem;
+      color: #003366;
+      background-color: #dedede;
+      padding: .5rem;
+      border: 1px solid #dedede;
+    }
+  }
+  .totalizer{
+    margin-top: 1rem;
+    .affiliate{
+      font-weight: 600 !important;
+    }
+    h3{
+      font-size: 1.2rem !important;
+      font-weight: 500 !important;
+    }
+    .total_report{
+      font-weight: 600 !important;
+    }
+  }
+}

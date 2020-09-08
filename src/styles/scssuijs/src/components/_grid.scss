@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the grid component.
+// -----------------------------------------------------------------------------
+
+// Container widths
+
+@if $enable-grid-classes {
+	.ui-container {
+		@include make-container();
+		@include make-container-max-widths();
+	}
+}
+
+// Fluid container
+
+@if $enable-grid-classes {
+	.ui-container-fluid {
+		@include make-container();
+	}
+}
+
+// Row
+
+@if $enable-grid-classes {
+	.ui-row {
+		@include make-row();
+	}
+	.no-gutters {
+		margin-right: 0;
+		margin-left: 0;
+		>.ui-column,
+		>[class*="ui-column-"] {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+// Columns
+
+@if $enable-grid-classes {
+	@include make-grid-columns();
+}

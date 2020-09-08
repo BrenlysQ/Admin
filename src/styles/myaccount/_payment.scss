@@ -1,0 +1,22 @@
+.dashboard-credit__nav {
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+.dashboard-credit__nav li  {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.dashboard-credit__nav li a {
+    padding: 1rem 0rem;
+    display: flex;
+    border-bottom: 3px solid transparent;
+    &:focus,
+    &:hover {
+        border-color: $secondary-color;
+    }
+}

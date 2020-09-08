@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+// Ui Button
+
+.#{$button-selector} {
+    @include button;
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    &--long {
+        width: 100%;
+    }
+
+    &--small {
+        @include button-size($button-padding-y, $button-padding-y, $button-font-size, $button-border-radius);
+        &-icon {
+            padding: 0.5rem 0.5rem 0.2rem;
+        }
+    }
+
+    &--default {
+        @include button-default;
+    }
+    
+    &--primary {
+        @include button-primary;
+    }
+
+    &--secondary {
+        @include button-secondary;
+    }
+
+    &--success {
+        @include button-success;
+    }
+
+    &--danger {
+        @include button-danger;
+    }
+}
+
+// Ui Button Ghost
+
+.#{$button-selector}-ghost {
+    @include button;
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    &--primary {
+        @include button-ghost-primary();
+    }
+
+    &--secondary {
+        @include button-ghost-secondary();
+    }
+
+    &--success {
+        @include button-ghost-success();
+    }
+
+    &--danger {
+        @include button-ghost-danger();
+    }
+}
+
+

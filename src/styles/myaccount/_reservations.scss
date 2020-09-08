@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the myaccount reservations component.
+// ----------------------------------------------------------------------------
+
+.dashboard-reservation {
+    padding: 1.5rem;
+}
+
+.dashboard-reservation__card {
+    background: white;
+    box-shadow: 0px 5px 10px rgba(132, 132, 132, 0.1);
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.dashboard-reservation__header {
+    background: #003366;
+    width: 125px;
+    color: white;
+    padding: 0.5rem;
+    position: relative;
+    box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-reservation__header h1 {
+    font-size: 14px;
+}
+
+.dashboard-reservation__body {
+    width: 100%;
+}
+
+.dashboard-reservation__row {
+    padding: 1rem;
+}
+
+.dashboard-reservation__row:last-child {
+    padding: 0.5rem 1rem 1rem;
+    border-top: 1px solid #f3f3f3;
+}
+
+.dashboard-reservation__header:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -47px;
+    width: 0;
+    height: 0;
+    border-right: 19px solid transparent;
+    border-top: 22px solid transparent;
+    border-left: 28px solid #003366;
+    border-bottom: 15px solid #003366;
+}
+
+.dashboard-reservation__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid #eee;
+    margin-right: 1rem;
+    padding: 8px 6px;
+}
+
+.dashboard-reservation__airline {
+    width: 70px;
+    height: 20px;
+}
+
+.dashboard-reservation__icon {
+    margin: 0 0.5rem;
+    height: 20px;
+    display: block;
+}

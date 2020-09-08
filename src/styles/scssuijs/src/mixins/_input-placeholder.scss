@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains input-placeholder Sass Grid mixins.
+// -----------------------------------------------------------------------------
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}

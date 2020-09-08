@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass Input mixins.
+// -----------------------------------------------------------------------------
+// Input Color
+@mixin ui-input-color($color, $border) {
+    color: $color;
+    border-color: $border;
+    &:focus {
+        color: $color;
+        border-color: darken($border, 25%);
+    }
+    &:hover {
+        color: $color;
+        border-color: darken($border, 12%);
+    }
+    &:active {
+        border-color: darken($border, 12%);
+    }
+}
+
+// Input Size
+@mixin ui-input-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+}

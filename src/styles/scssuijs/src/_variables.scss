@@ -1,0 +1,149 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+// Screen Sizes
+
+$screen-limit-xsmall: 20rem !default;
+$screen-limit-small:  30rem !default;
+$screen-limit-medium: 48rem !default;
+$screen-limit-large:  64rem !default;
+$screen-limit-xlarge: 78rem !default;
+$screen-limit-super:  116rem !default;
+
+$screen-adjustment: .01 !default;
+
+// Grid columns
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+
+// Spacing
+
+$spacing-super:   3rem !default;
+$spacing-xlarge:  2rem !default;
+$spacing-large:   1.5rem !default;
+$spacing-medium:  1rem !default;
+$spacing-small:  .5rem !default;
+$spacing-xsmall: .25rem !default;
+$spacing-tiny:   .125rem !default;
+
+
+// Grid
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+
+
+// Colors
+
+$primary-color   : #00BAFF;
+$secondary-color : #003366;
+$three-color     : #F2F3F8;
+$default-color   : #BBBBBB;
+$danger-color    : #FD3258;
+$warning-color   : #FECD2F;
+$success-color   : #24D5D8;
+$text-color      : #BBBBBB;
+$white           : #fff;
+$black           : #000;
+$color-link      :  $secondary-color;
+$gray-color      : #BBBBBB;
+$linght-gray-color : #F1F1F1;
+
+// Font
+
+$font-size-x-small  : 12px;
+$font-size-small    : 14px;
+$font-size          : 16px;
+$font-size-medium   : 18px;
+$font-size-large    : 24px;
+
+$font-weight-light  : 300;
+$font-weight-medium : 400;
+$font-weight-semi   : 500;
+$font-weight-bold   : 600;
+
+$font-family        : 'Poppins', sans-serif;
+$font-base          : $font-size;
+
+$spacing-super   : 3rem    !default;
+$spacing-xlarge  : 2rem    !default;
+$spacing-large   : 1.5rem  !default;
+$spacing-medium  : 1rem    !default;
+$spacing-small   : .5rem   !default;
+$spacing-xsmall  : .25rem  !default;
+$spacing-tiny    : .125rem !default;
+
+$full            : 100%;
+
+
+// Margin
+
+$margin-large   : $spacing-super;
+$margin-xlarge  : $spacing-xlarge;
+$margin-large   : $spacing-large;
+$margin-medium  : $spacing-medium;
+$margin-small   : $spacing-small;
+$margin-xsmall  : $spacing-xsmall;
+$margin-tiny    : $spacing-tiny;
+
+// Padding
+
+$padding-large   : $spacing-super;
+$padding-xlarge  : $spacing-xlarge;
+$padding-large   : $spacing-large;
+$padding-medium  : $spacing-medium;
+$padding-small   : $spacing-small;
+$padding-xsmall  : $spacing-xsmall;
+$padding-tiny    : $spacing-tiny;
+
+// Button
+
+$button-selector      : 'ui-button';
+$button-border-radius : 2px;
+$button-font-size     : $font-size-small;
+$button-padding-y     : $spacing-small;
+$button-padding-x     : $spacing-medium;
+$button-color         : $white;
+$button-line-height   : 1.4;
+
+// Input
+
+$input-border-radius : 0;
+$input-font-size     : $font-size-small;
+$input-padding-y     : $spacing-small;
+$input-padding-x     : $spacing-medium;
+$input-color         : #bbb;
+$input-background    : transparent;
+$input-line-height   : 1.4;
+$input-height-base   : 34px;
+$input-border        : #f1f1f1;
+
+// Z-index
+
+$z-index-xlarge      : 500;
+$z-index-large       : 400;
+$z-index-medium      : 300;
+$z-index-small       : 200;
+$z-index-xsmall      : 100;
+
+// Grids
+
+$enable-grid-classes : true !default;

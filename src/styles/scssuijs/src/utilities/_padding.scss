@@ -1,0 +1,127 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the padding component.
+// -----------------------------------------------------------------------------
+.ui-padding-top {
+    padding-top: $padding-medium !important;
+}
+
+.ui-padding-bottom {
+    padding-bottom: $padding-medium !important;
+}
+
+.ui-padding-left {
+    padding-left: $padding-medium !important;
+}
+
+.ui-padding-right {
+    padding-right: $padding-medium !important;
+}
+
+/* Small
+========================================================================== */
+
+.ui-padding-small-top {
+    padding-top: $padding-small !important;
+}
+
+.ui-padding-small-bottom {
+    padding-bottom: $padding-small !important;
+}
+
+.ui-padding-small-left {
+    padding-left: $padding-small !important;
+}
+
+.ui-padding-small-right {
+    padding-right: $padding-small !important;
+}
+
+/* Medium
+========================================================================== */
+
+.ui-padding-medium-top {
+    padding-top: $padding-medium !important;
+}
+
+.ui-padding-medium-bottom {
+    padding-bottom: $padding-medium !important;
+}
+
+.ui-padding-medium-left {
+    padding-left: $padding-medium !important;
+}
+
+.ui-padding-medium-right {
+    padding-right: $padding-medium !important;
+}
+
+/* Large
+========================================================================== */
+
+.ui-padding-xlarge-top {
+    padding-top: $padding-xlarge !important;
+}
+
+.ui-padding-xlarge-bottom {
+    padding-bottom: $padding-xlarge !important;
+}
+
+.ui-padding-xlarge-left {
+    padding-left: $padding-xlarge !important;
+}
+
+.ui-padding-xlarge-right {
+    padding-right: $padding-xlarge !important;
+}
+
+/* Remove
+========================================================================== */
+
+.ui-padding-remove {
+    padding: 0 !important;
+}
+
+.ui-padding-remove-top {
+    padding-top: 0 !important;
+}
+
+.ui-padding-remove-bottom {
+    padding-bottom: 0 !important;
+}
+
+.ui-padding-remove-left {
+    padding-left: 0 !important;
+}
+
+.ui-padding-remove-right {
+    padding-right: 0 !important;
+}
+
+.ui-padding-remove-vertical {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Auto
+========================================================================== */
+
+.ui-padding-auto {
+    padding-left: auto !important;
+    padding-right: auto !important;
+}
+
+.ui-padding-auto-top {
+    padding-top: auto !important;
+}
+
+.ui-padding-auto-bottom {
+    padding-bottom: auto !important;
+}
+
+.ui-padding-auto-left {
+    padding-left: auto !important;
+}
+
+.ui-padding-auto-right {
+    padding-right: auto !important;
+}

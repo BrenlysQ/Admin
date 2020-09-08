@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass Grid mixins.
+// -----------------------------------------------------------------------------
+@mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+	%grid-column {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		padding-right: ($gutter / 2);
+		padding-left: ($gutter / 2);
+	}
+	@each $breakpoint in map-keys($breakpoints) {
+		$infix: breakpoint-infix($breakpoint, $breakpoints);
+		@for $i from 1 through $columns {
+			.ui-column#{$infix}-#{$i} {
+				@extend %grid-column;
+			}
+		}
+		.ui-column#{$infix},
+		.ui-column#{$infix}-auto {
+			@extend %grid-column;
+		}
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			.ui-column#{$infix} {
+				flex-basis: 0;
+				flex-grow: 1;
+				max-width: 100%;
+			}
+			.ui-column#{$infix}-auto {
+				flex: 0 0 auto;
+				width: auto;
+				max-width: none;
+			}
+			@for $i from 1 through $columns {
+				.ui-column#{$infix}-#{$i} {
+					@include make-col($i, $columns);
+				}
+			}
+			.order#{$infix}-first {
+				order: -1;
+			}
+			.order#{$infix}-last {
+				order: $columns + 1;
+			}
+			@for $i from 0 through $columns {
+				.order#{$infix}-#{$i} {
+					order: $i;
+				}
+			}
+			@for $i from 0 through ($columns - 1) {
+				@if not ($infix=="" and $i==0) {
+					.offset#{$infix}-#{$i} {
+						@include make-col-offset($i, $columns);
+					}
+				}
+			}
+		}
+	}
+}

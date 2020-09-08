@@ -1,0 +1,113 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the input component.
+// -----------------------------------------------------------------------------
+/* Ui Input
+========================================================================== */
+
+.ui-input-group {
+    width: 100%;
+    position: relative;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    margin-bottom: $margin-medium;
+}
+
+.ui-input {
+    display: block;
+    width: 100%;
+    color: $primary-color;
+    background-color: $input-background;
+    background-image: none;
+    border: 1px solid $input-border;
+    outline: none;
+    transition: all .2s;
+    max-height: 35px;
+    @include ui-input-size($input-padding-y, $input-padding-x, $input-font-size, $input-line-height, $input-border-radius);
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    &::-webkit-input-placeholder {
+        color: #bbb;
+    }
+    &:focus {
+        border: 1px solid transparent;
+        box-shadow: 4px 4px 17px rgba(0, 0, 0, 0.1);
+    }
+    &--primary {
+        @include ui-input-color($white, $primary-color)
+    }
+    &--secondary {
+        @include ui-input-color($white, $secondary-color)
+    }
+    &--danger {
+        @include ui-input-color($white, $danger-color)
+    }
+    &--warning {
+        @include ui-input-color($white, $warning-color)
+    }
+    &--success {
+        @include ui-input-color($white, $success-color)
+    }
+}
+
+.ui-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: $font-size-small;
+    font-weight: $font-weight-semi;
+    width: 100%;
+    &.labelActive {
+        color: #00baff !important
+    }
+}
+
+.ui-input-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: #999;
+    width: 40px;
+}
+
+// Radio
+.ui-radio {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-right: 16px;
+    label {
+        background-color: #fff;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 18px;
+        width: 18px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        &:after {
+            content: "";
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            width: 10px;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+    }
+    input[type="radio"] {
+        visibility: hidden;
+        &:checked+label {
+            background-color: white;
+            &:after {
+                opacity: 1;
+                background: $secondary-color;
+            }
+        }
+    }
+}

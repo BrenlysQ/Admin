@@ -1,0 +1,44 @@
+{
+  "_from": "scssuijs",
+  "_id": "scssuijs@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-RCJlJcEAejoh7V+kHTTeVAvBCem1cKSRqL5o14yfGLQRy5gtTKP1jM2zGMLuKpj58CvxPw2ajBhPZg13CNpu7A==",
+  "_location": "/scssuijs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "scssuijs",
+    "name": "scssuijs",
+    "escapedName": "scssuijs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/scssuijs/-/scssuijs-1.0.0.tgz",
+  "_shasum": "8e83827f2bd0723df2d50518c6b9c59d23d1ea3c",
+  "_spec": "scssuijs",
+  "_where": "C:\\Users\\Usuario\\Documents\\Admin",
+  "author": {
+    "name": "josesantana"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Framework CSS, SCSS",
+  "keywords": [
+    "SCSS",
+    "SASS",
+    "CSS"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "scssuijs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

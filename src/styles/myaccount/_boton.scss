@@ -1,0 +1,164 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the myaccount boton component.
+// -----------------------------------------------------------------------------
+.cotizator-button {
+    color: $primary-color;
+    margin-bottom: 8rem;
+    background: white;
+    padding: 1rem;
+    transition: all .2s;
+    box-shadow:1px 6px 11px rgba(152, 152, 152, 0.1);
+    &__type {
+        @include flexbox();
+    }
+    &__class {
+        @include flexbox();
+        @include align-items(center);
+    }
+    &__passengers {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        box-sizing: border-box;
+        cursor: pointer;
+        width: $full;
+        position: relative;
+        padding: $input-padding-y;
+        font-size: $font-size-small;
+        color: $primary-color;
+        line-height: 1.4;
+        outline: none;
+        background: $white;
+        color: $gray-color;
+        max-height: 35px;
+    }
+    &__options {
+        position: absolute;
+        top: $full;
+        left: 0;
+        width: $full;
+        box-sizing: border-box;
+        background: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 100;
+        &__error {
+            padding: 15px;
+            p {
+                color: $danger-color;
+                font-size: $font-size-x-small;
+                text-align: center;
+            }
+        }
+        &.open {
+            display: block
+        }
+    }
+    &__option {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        padding: 10px 15px;
+    }
+    .vdp-datepicker {
+        width: 100%;
+    }
+    .vdp-datepicker__calendar {
+        border: none;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .vdp-datepicker__calendar .cell.selected {
+        color: white;
+        background: $secondary-color;
+        border-radius: 4px;
+    }
+    .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover,
+    .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover,
+    .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover {
+        background: $primary-color;
+        border: none;
+        color: white;
+        border-radius: 4px;
+    }
+}
+
+.autocomplete {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.autocomplete__box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+}
+
+.autocomplete__searching {
+    border-radius: 3px 3px 0 0;
+}
+
+.autocomplete__inputs {
+    flex-grow: 1;
+    padding: 0 5px;
+    input {
+        width: 100%;
+        border: 0;
+        color: $primary-color;
+        &::-webkit-input-placeholder {
+            color: #bbb;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.autocomplete--clear {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+}
+
+.autocomplete__results {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    z-index: 1000;
+    position: absolute;
+    max-height: 400px;
+    overflow-y: auto;
+    background: white;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.autocomplete__results__item--error {
+    color: $danger-color;
+}
+
+.autocomplete__results__item {
+    padding: 7px 10px;
+    cursor: pointer;
+    color: $secondary-color;
+    &:hover {
+        background: rgba(0, 180, 255, 0.075);
+        &.autocomplete__selected {
+            background: rgba(0, 180, 255, 0.15);
+        }
+    }
+}
+
+.autocomplete__icon {
+    height: 14px;
+    width: 14px;
+}
+
+.animate-spin {
+    animation: spin 2s infinite linear;
+}
+
+// @keyframes 
+//     spin from transform rotate(0deg) to transform rotate(360deg)

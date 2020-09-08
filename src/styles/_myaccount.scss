@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the myaccount component.
+// -----------------------------------------------------------------------------
+
+@import 'myaccount/asociates';
+@import 'myaccount/boton';
+@import 'myaccount/response';
+@import 'myaccount/cotizator';
+@import 'myaccount/reservations';
+@import 'myaccount/profile';
+@import 'myaccount/dropdown';
+@import 'myaccount/invoice';
+@import 'myaccount/payment';
+@import 'myaccount/massive';
+.total_amount{
+  text-align: right;
+}
+.alert_load{
+  font-size: 1.2rem;
+  margin: 1rem 0px;
+}

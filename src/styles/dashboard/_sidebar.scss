@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the dashboard sidebar component.
+// -----------------------------------------------------------------------------
+.dashboard-sidebar {
+    display: block;
+    position: relative;
+    transition: width 0.1s;
+    @include flex(0 0 auto);
+    width: 240px;
+    z-index: 1000;
+    background-color: white;
+    color: #9ea1ab;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    &.collapse {
+        width: 65px
+    }
+}
+
+.dashboard-sidenav {
+    &__list {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-wrap(wrap);
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+        .sub_menu{
+          width: 100%;
+          background-color: #EAEAEA;
+          li a{
+            padding-left: 1rem;
+          }
+        }
+    }
+    &__link {
+        width: 100%;
+        padding: .5rem;
+        color: $text-color;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all 0.2s;
+        @include flexbox();
+        @include align-items(center);
+        cursor: pointer;
+        position: relative;
+        border-left: 4px solid transparent;
+        border-bottom: 1px solid #f2f2f2;
+        &:hover {
+            background-color: #f6f6f6;
+            border-left: 4px solid $primary-color;
+            color: $primary-color;
+        }
+        &.collapse {
+            padding: 16px;
+            @include justify-content(center)
+        }
+        &--disable {
+            border: none;
+            &:hover {
+                background-color: transparent !important;
+                border: none !important;
+            }
+        }
+        &__icon {
+            width: 35px;
+            margin-right: 8px;
+            &--min {
+                width: 15px;
+                position: absolute;
+                right: 15px;
+                &.collapse {
+                    display: none;
+                }
+            }
+            &.collapse {
+                margin: 0
+            }
+        }
+    }
+}

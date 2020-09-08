@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the select component.
+// -----------------------------------------------------------------------------
+.ui-select {
+    padding: 0;
+    width: 100%;
+    position: relative;
+    &__button {
+        font-size: 14px;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+    }
+    &__content {
+        background: $white;
+        display: none;
+        position: absolute;
+        top: 110%;
+        box-shadow: 0 5px 6px rgba(0, 0, 0, .1);
+        z-index: $z-index-medium;
+        width: 100%;
+        &.open {
+            display: block;
+        }
+    }
+    &__items {
+        @include flexbox();
+        width: 100%;
+        a {
+            display: block;
+            padding: 16px;
+            width: 100%;
+            font-size: 14px;
+            cursor: pointer;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the myaccount response component.
+// -----------------------------------------------------------------------------
+
+.ctz-response {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    transition: all .2s;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    &:hover {
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+    }
+    &__departure {
+        @include flexbox;
+        @include align-items(center);
+        margin-bottom: 1rem;
+    }
+    &__title {
+        font-size: 16px;
+        &--primary {
+            color: $primary-color;
+        }
+        &--secondary {
+            color: $secondary-color;
+        }
+    }
+    &__selected {
+        background: $secondary-color;
+        padding: 5px 0;
+        .ctz-response__title {
+            color: white;
+        }
+    }
+    &__airline {
+        width: 60px;
+        height: 20px;
+    }
+    &__destination {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        margin: 0 1rem;
+    }
+    &__stop {
+        position: relative;
+        margin: 0 0.5rem;
+        width: 80px;
+        top: -5px;
+    }
+    &__line {
+        display: block;
+        height: 1px;
+        background: #eee;
+        position: relative;
+    }
+    &__scales {
+        @include flexbox;
+        @include justify-content(center);
+        &__text {
+            margin: 0 1rem;
+            position: relative;
+            font-size: 10px;
+            top: -4px;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -60%;
+                left: 50%;
+                transform: translate(-50%);
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                background: white;
+                border: 1px solid #ddd;
+                z-index: 1;
+            }
+        }
+    }
+    &__price {
+        width: $full;
+        @include flexbox;
+        @include flex-direction(column);
+        @include align-items(center);
+        &__title {
+            font-size: 20px;
+            color: $secondary-color;
+        }
+    }
+}

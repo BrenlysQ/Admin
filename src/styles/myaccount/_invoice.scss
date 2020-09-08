@@ -1,0 +1,44 @@
+.dashboard-invoice{
+  padding: 1rem;
+}
+.detail-invoice{
+  .invoice-title{
+    font-weight: 600;
+  }
+  .invoice-detail-controls{
+    position: absolute;
+    right: 1rem;
+    i{
+      color: $secondary-color;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+  }
+  .more-details{
+    h3{
+      padding-left: 0px !important;
+    }
+  }
+  .invoice-title-lg{
+    padding-left: 1rem;
+    font-size: 1.4rem;
+  }
+  .invoice-total{
+    text-align: right;
+    display: block;
+    .invoice-amount{
+      font-weight: bold;
+    }
+  }
+  .invoice-grandtotal{
+    text-align: right;
+    font-weight: bold;
+    display: block;
+    .invoice-amount{
+      font-size: 1.2rem;
+    }
+  }
+  .no-padding{
+    padding: 0px;
+  }
+}

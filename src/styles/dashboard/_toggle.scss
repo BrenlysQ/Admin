@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the dashboard toggle component.
+// -----------------------------------------------------------------------------
+
+.toggle-menu {
+    box-sizing: content-box;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem 1rem;
+    text-align: center;
+    width: 45px;
+    &:hover {
+        cursor: pointer;
+    }
+    &__item {
+        background: $primary-color;
+        display: block;
+        height: 4px;
+        transition: all 0.3s ease-in-out;
+        width: 30px;
+        margin: 0px auto 5px;
+        &:nth-child(2) {
+            background: $secondary-color;
+            width: 40%;
+            margin-left: 10px;
+        }
+    }
+    &.open {
+        box-sizing: border-box;
+        padding: 1rem 0.8rem;
+        text-align: center;
+        width: 65px;
+        .toggle-menu__item {
+            margin: 0 7px 5px;
+            &:first-child {
+                transform: rotate(45deg);
+                transform-origin: 0 5px;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                transform-origin: 6px 2px;
+            }
+        }
+    }
+}
+
+// Theme
+.toggle-menu--dark {
+    .toggle-menu__item {
+        background: $secondary-color
+    }
+    &:nth-child(2) {
+        background: $secondary-color
+    }
+}

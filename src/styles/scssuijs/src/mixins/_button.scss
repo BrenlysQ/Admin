@@ -1,0 +1,226 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass Button mixins.
+// -----------------------------------------------------------------------------
+
+// Sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    border-radius: $border-radius;
+}
+
+// Shadown
+@mixin button-shadown($color) {
+    box-shadow: 0 2px 2px 0 rgba($color, 0.14), 0 3px 1px -2px rgba($color, 0.2), 0 1px 5px 0 rgba($color, 0.12);
+    &:hover,
+    &:focus {
+        box-shadow: 0 14px 26px -12px rgba($color, 0.42), 0 4px 23px 0 rgba($color, 0.12), 0 8px 10px -5px rgba($color, 0.2);
+    }
+}
+
+// Colors
+@mixin button-color($color, $background, $border ){
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    // a inside Button which only work in Chrome
+    > a:only-child {
+        color: $color-link;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: transparent;
+        }
+    }
+}
+
+// Variant
+@mixin button-variant($color, $background, $border){
+    @include button-color($color, $background, $border);
+
+    &:hover
+    &:focus {
+        @include button-color($white, tint($background, 20%), tint($border, 20%));
+    }
+    &:active,
+    &.active {
+        @include button-color($white, shade($background, 5%), shade($background, 5%));
+    }
+}
+
+// Button
+@mixin button() {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid transparent;
+    margin-bottom: 0;
+    touch-action: manipulation;
+    background-image: none;
+    line-height: $button-line-height;
+    user-select: none;
+    transition: all .2s linear;
+    
+    @include button-size($button-padding-y, $button-padding-x, $button-font-size, $button-border-radius);
+
+    &:active,
+    &:focus {
+        outline: 0;
+    }
+
+    &:not([disabled]):hover {
+        text-decoration: none;
+    }
+
+    &:not([disabled]):active {
+        outline: 0;
+        transition: none;
+    }
+
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        > * {
+            pointer-events: none;
+        }
+    }
+}
+
+// Default
+@mixin button-default() {
+    @include button-variant($white, $default-color, $default-color);
+    @include button-shadown($default-color);
+
+    &:hover,
+    &:focus {
+        @include button-color($white, white, tint($default-color, 20%));
+    }
+    
+    &:active,
+    &.active {
+        @include button-color($white, white, shade($default-color, 5%));
+    }
+}
+
+// Primary
+@mixin button-primary() {
+    @include button-shadown($primary-color);
+    @include button-variant($white, $primary-color, $primary-color);
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        @include button-variant($white, $primary-color, $primary-color);
+        box-shadow: 0 14px 26px -12px rgba($primary-color, 0.42), 0 4px 23px 0 rgba($primary-color, 0.12), 0 8px 10px -5px rgba($primary-color, 0.2);
+    }
+}
+
+// Secondary
+@mixin button-secondary() {
+    @include button-shadown($secondary-color);
+    @include button-variant($white, $secondary-color, $secondary-color);
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        @include button-variant($white, $secondary-color, $secondary-color);
+    }
+}
+
+// Success
+@mixin button-success() {
+    @include button-shadown($success-color);
+    @include button-variant($white, $success-color, $success-color);
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        @include button-variant($white, $success-color, $success-color);
+    }
+}
+
+// Danger
+@mixin button-danger() {
+    @include button-shadown($danger-color);
+    @include button-variant($white, $danger-color, $danger-color);
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        @include button-variant($white, $danger-color, $danger-color);
+    }
+}
+
+
+// Ghost
+@mixin button-ghost($color, $background, $border-color){
+    @include button-color($color, $background, $border-color);
+    background-color: $background;
+    color: $color;
+    border-color: $border-color;
+
+    &:hover {
+        @include button-color($white, $color, $color);
+    }
+}
+
+// Ghost Primary
+@mixin button-ghost-primary() {
+    @include button-ghost($primary-color, transparent, $primary-color);
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        @include button-variant($white, $primary-color, $primary-color);
+    }
+}
+
+// Ghost Secondary
+@mixin button-ghost-secondary() {
+    @include button-ghost($secondary-color, transparent, $secondary-color);
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        @include button-variant($white, $secondary-color, $secondary-color);
+    }
+}
+
+// Ghost Success
+@mixin button-ghost-success() {
+    @include button-ghost($success-color, transparent, $success-color);
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        @include button-variant($white, $success-color, $success-color);
+    }
+}
+
+// Ghost Danger
+@mixin button-ghost-danger() {
+    @include button-ghost($danger-color, transparent, $danger-color);
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        @include button-variant($white, $danger-color, $danger-color);
+    }
+}

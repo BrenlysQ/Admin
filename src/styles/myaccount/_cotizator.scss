@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the myaccount cotizator component.
+// -----------------------------------------------------------------------------
+
+.dashboard-cotizator {
+    padding: 1rem 1.5rem 1.5rem ;
+    .vue-tabs .nav-tabs {
+        border-bottom: 1px solid #E1DDDD !important;
+        margin-bottom: 2rem;
+    }
+    .vue-tabs .nav>li>a:hover,
+    .vue-tabs .nav>li>a:focus {
+        background-color: transparent !important;
+        border-color: transparent;
+    }
+    .vue-tabs .nav-tabs>li.active>a,
+    .vue-tabs .nav-tabs>li.active>a:hover,
+    .vue-tabs .nav-tabs>li.active>a:focus {
+        color: $secondary-color !important;
+        background-color: transparent !important;
+        border: none;
+        border-bottom-color: transparent;
+        border-bottom: 3px solid $secondary-color;
+        cursor: default;
+    }
+}

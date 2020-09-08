@@ -1,0 +1,127 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the margin component.
+// -----------------------------------------------------------------------------
+.ui-margin-top {
+    margin-top: $margin-medium !important;
+}
+
+.ui-margin-bottom {
+    margin-bottom: $margin-medium !important;
+}
+
+.ui-margin-left {
+    margin-left: $margin-medium !important;
+}
+
+.ui-margin-right {
+    margin-right: $margin-medium !important;
+}
+
+/* Small
+========================================================================== */
+
+.ui-margin-small-top {
+    margin-top: $margin-small !important;
+}
+
+.ui-margin-small-bottom {
+    margin-bottom: $margin-small !important;
+}
+
+.ui-margin-small-left {
+    margin-left: $margin-small !important;
+}
+
+.ui-margin-small-right {
+    margin-right: $margin-small !important;
+}
+
+/* Medium
+========================================================================== */
+
+.ui-margin-medium-top {
+    margin-top: $margin-medium !important;
+}
+
+.ui-margin-medium-bottom {
+    margin-bottom: $margin-medium !important;
+}
+
+.ui-margin-medium-left {
+    margin-left: $margin-medium !important;
+}
+
+.ui-margin-medium-right {
+    margin-right: $margin-medium !important;
+}
+
+/* Large
+========================================================================== */
+
+.ui-margin-large-top {
+    margin-top: $margin-large !important;
+}
+
+.ui-margin-large-bottom {
+    margin-bottom: $margin-large !important;
+}
+
+.ui-margin-large-left {
+    margin-left: $margin-large !important;
+}
+
+.ui-margin-large-right {
+    margin-right: $margin-large !important;
+}
+
+/* Remove
+========================================================================== */
+
+.ui-margin-remove {
+    margin: 0 !important;
+}
+
+.ui-margin-remove-top {
+    margin-top: 0 !important;
+}
+
+.ui-margin-remove-bottom {
+    margin-bottom: 0 !important;
+}
+
+.ui-margin-remove-left {
+    margin-left: 0 !important;
+}
+
+.ui-margin-remove-right {
+    margin-right: 0 !important;
+}
+
+.ui-margin-remove-vertical {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Auto
+========================================================================== */
+
+.ui-margin-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.ui-margin-auto-top {
+    margin-top: auto !important;
+}
+
+.ui-margin-auto-bottom {
+    margin-bottom: auto !important;
+}
+
+.ui-margin-auto-left {
+    margin-left: auto !important;
+}
+
+.ui-margin-auto-right {
+    margin-right: auto !important;
+}

@@ -1,0 +1,196 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+// Flexbox
+
+.ui-flex {
+    @include flexbox()
+}
+
+.ui-flex-wrap {
+    @include flex-wrap(wrap)
+}
+
+.ui-align-items {
+    @include align-items(center)
+}
+
+.ui-justify-content-center {
+    @include justify-content(center)
+}
+
+.ui-justify-content-around {
+    @include justify-content(space-around)
+}
+
+.ui-justify-content-between {
+    @include justify-content(space-between)
+}
+
+.ui-justify-content-flex-start {
+    @include justify-content(flex-start)
+}
+
+.ui-justify-content-flex-end {
+    @include justify-content(flex-end)
+}
+
+// Color
+
+.ui-color-white {
+    color: white;
+}
+
+.ui-color-grey {
+    color: #BBBBBB;
+}
+
+.ui-color-grey-light {
+    color: #ddd;
+}
+
+.ui-color-primary {
+    color: $primary-color;
+}
+
+.ui-color-secondary {
+    color: $secondary-color;
+}
+
+.ui-color-danger {
+    color: $danger-color;
+}
+
+.ui-color-success {
+    color: $success-color;
+}
+
+.ui-color-warning {
+    color: $warning-color;
+}
+
+// Background
+
+.ui-bg-primary {
+    background: $primary-color;
+}
+
+.ui-bg-primary-light {
+    background: lighten($primary-color, 40%);
+}
+
+.ui-bg-secondary {
+    background: $secondary-color;
+}
+
+.ui-bg-success {
+    background: $success-color;
+}
+
+.ui-bg-warning {
+    background: $warning-color;
+}
+
+.ui-bg-danger {
+    background: $danger-color;
+}
+
+.ui-font-extra-small-size {
+    font-size: 12px;
+}
+
+.ui-font-small-size {
+    font-size: 14px;
+}
+
+.ui-font-normal-size {
+    font-size: 16px;
+}
+
+.ui-font-medium-size {
+    font-size: 18px;
+}
+
+.ui-font-large-size {
+    font-size: 24px;
+}
+
+.ui-font-weight-bold {
+    font-weight: 600;
+}
+
+// Text Aling
+
+.ui-text-right {
+    text-align: right;
+}
+
+.ui-text-center {
+    text-align: center;
+}
+
+.ui-text-left {
+    text-align: left;
+}
+
+.ui-text-justify {
+    text-align: justify;
+}
+
+// SVG
+
+.fill-primary {
+    fill: $primary-color;
+}
+
+.fill-secondary {
+    fill: $secondary-color;
+}
+
+.fill-white {
+    fill: $white;
+}
+
+.fill-success {
+    fill: $success-color;
+}
+
+.fill-disable {
+    fill: #ececec;
+}
+
+.fill-danger {
+    fill: $danger-color;
+}
+
+.stroke-primary {
+    stroke: $primary-color;
+}
+
+
+// Positions
+
+.ui-relative {
+    position: relative;
+}
+
+
+// Display
+
+.ui-block {
+    display: block;
+    width: 100%;
+}
+
+.ui-not-visible {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+// Cursor
+
+.ui-pointer {
+    cursor: pointer
+}
